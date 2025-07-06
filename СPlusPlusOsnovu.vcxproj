@@ -1,0 +1,391 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{7c4f1140-7a9f-45b9-a8f7-2c8981cfd5e6}</ProjectGuid>
+    <RootNamespace>cOsnovaGoshaDudar</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+    <ProjectName>СPlusPlusOsnovu</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <BrowseInformation>true</BrowseInformation>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="СPlusPlusOsnovu.cpp" />
+    <ClCompile Include="Class\Myclass100.cpp" />
+    <ClCompile Include="Class\Myclass101.cpp" />
+    <ClCompile Include="Class\Myclass102.cpp" />
+    <ClCompile Include="Class\Myclass103.cpp" />
+    <ClCompile Include="Class\Myclass104.cpp" />
+    <ClCompile Include="Class\Myclass107.cpp" />
+    <ClCompile Include="Class\Myclass109.cpp" />
+    <ClCompile Include="Class\Myclass111.cpp" />
+    <ClCompile Include="Class\Myclass112.cpp" />
+    <ClCompile Include="Class\Myclass113.cpp" />
+    <ClCompile Include="Class\Myclass114.cpp" />
+    <ClCompile Include="Class\Myclass115.cpp" />
+    <ClCompile Include="Class\Myclass116.cpp" />
+    <ClCompile Include="Class\Myclass117.cpp" />
+    <ClCompile Include="Class\Myclass118.cpp" />
+    <ClCompile Include="Class\Myclass119.cpp" />
+    <ClCompile Include="Class\Myclass120.cpp" />
+    <ClCompile Include="Class\Myclass121.cpp" />
+    <ClCompile Include="Class\Myclass123.cpp" />
+    <ClCompile Include="Class\Myclass124.cpp" />
+    <ClCompile Include="Class\Myclass125.cpp" />
+    <ClCompile Include="Class\MyClass126.cpp" />
+    <ClCompile Include="Class\MyClass127.cpp" />
+    <ClCompile Include="Class\MyClass129.cpp" />
+    <ClCompile Include="Class\MyClass130.cpp" />
+    <ClCompile Include="Class\MyClass131.cpp" />
+    <ClCompile Include="Class\MyClass132.cpp" />
+    <ClCompile Include="Class\MyClass134.cpp" />
+    <ClCompile Include="Class\MyClass136.cpp" />
+    <ClCompile Include="Class\MyClass137.cpp" />
+    <ClCompile Include="Class\MyClass138.cpp" />
+    <ClCompile Include="Class\Myclass139.cpp" />
+    <ClCompile Include="Class\Myclass140.cpp" />
+    <ClCompile Include="Class\Myclass141.cpp" />
+    <ClCompile Include="Class\Myclass142.cpp" />
+    <ClCompile Include="Class\Myclass143.cpp" />
+    <ClCompile Include="Class\Myclass144.cpp" />
+    <ClCompile Include="Class\Myclass145.cpp" />
+    <ClCompile Include="Class\Myclass146.cpp" />
+    <ClCompile Include="Class\Myclass147.cpp" />
+    <ClCompile Include="Class\Myclass148.cpp" />
+    <ClCompile Include="Class\Myclass149.cpp" />
+    <ClCompile Include="Class\Myclass150.cpp" />
+    <ClCompile Include="Class\Myclass151.cpp" />
+    <ClCompile Include="Class\Myclass152.cpp" />
+    <ClCompile Include="Class\Myclass153.cpp" />
+    <ClCompile Include="Class\Myclass154.cpp" />
+    <ClCompile Include="Class\Myclass155.cpp" />
+    <ClCompile Include="Class\Myclass156.cpp" />
+    <ClCompile Include="Class\Myclass158.cpp" />
+    <ClCompile Include="Class\Myclass159.cpp" />
+    <ClCompile Include="Class\Myclass160.cpp" />
+    <ClCompile Include="Class\Myclass161.cpp" />
+    <ClCompile Include="Class\Myclass162.cpp" />
+    <ClCompile Include="Class\Myclass163.cpp" />
+    <ClCompile Include="Class\Myclass164.cpp" />
+    <ClCompile Include="Class\Myclass165.cpp" />
+    <ClCompile Include="Class\Myclass166.cpp" />
+    <ClCompile Include="Class\Myclass167.cpp" />
+    <ClCompile Include="Class\Myclass168.cpp" />
+    <ClCompile Include="Class\Myclass169.cpp" />
+    <ClCompile Include="Class\Myclass20.cpp" />
+    <ClCompile Include="Class\Myclass22.cpp" />
+    <ClCompile Include="Class\Myclass24.cpp" />
+    <ClCompile Include="Class\Myclass25.cpp" />
+    <ClCompile Include="Class\Myclass26.cpp" />
+    <ClCompile Include="Class\Myclass27.cpp" />
+    <ClCompile Include="Class\Myclass28.cpp" />
+    <ClCompile Include="Class\Myclass29.cpp" />
+    <ClCompile Include="Class\Myclass30.cpp" />
+    <ClCompile Include="Class\Myclass51.cpp" />
+    <ClCompile Include="Class\Myclass57.cpp" />
+    <ClCompile Include="Class\Myclass58.cpp" />
+    <ClCompile Include="Class\Myclass59.cpp" />
+    <ClCompile Include="Class\Myclass60.cpp" />
+    <ClCompile Include="Class\Myclass61.cpp" />
+    <ClCompile Include="Class\Myclass62.cpp" />
+    <ClCompile Include="Class\Myclass63.cpp" />
+    <ClCompile Include="Class\Myclass64.cpp" />
+    <ClCompile Include="Class\Myclass65.cpp" />
+    <ClCompile Include="Class\Myclass66.cpp" />
+    <ClCompile Include="Class\Myclass67.cpp" />
+    <ClCompile Include="Class\Myclass68.cpp" />
+    <ClCompile Include="Class\Myclass70.cpp" />
+    <ClCompile Include="Class\Myclass71.cpp" />
+    <ClCompile Include="Class\Myclass73.cpp" />
+    <ClCompile Include="Class\Myclass74.cpp" />
+    <ClCompile Include="Class\Myclass75.cpp" />
+    <ClCompile Include="Class\Myclass76.cpp" />
+    <ClCompile Include="Class\Myclass77.cpp" />
+    <ClCompile Include="Class\Myclass78.cpp" />
+    <ClCompile Include="Class\Myclass79.cpp" />
+    <ClCompile Include="Class\Myclass80.cpp" />
+    <ClCompile Include="Class\Myclass81.cpp" />
+    <ClCompile Include="Class\Myclass82.cpp" />
+    <ClCompile Include="Class\Myclass83.cpp" />
+    <ClCompile Include="Class\Myclass84.cpp" />
+    <ClCompile Include="Class\Myclass85.cpp" />
+    <ClCompile Include="Class\Myclass86.cpp" />
+    <ClCompile Include="Class\Myclass87.cpp" />
+    <ClCompile Include="Class\Myclass88.cpp" />
+    <ClCompile Include="Class\Myclass89.cpp" />
+    <ClCompile Include="Class\Myclass90.cpp" />
+    <ClCompile Include="Class\Myclass91.cpp" />
+    <ClCompile Include="Class\Myclass92.cpp" />
+    <ClCompile Include="Class\Myclass93.cpp" />
+    <ClCompile Include="Class\Myclass94.cpp" />
+    <ClCompile Include="Class\Myclass95.cpp" />
+    <ClCompile Include="Class\Myclass96.cpp" />
+    <ClCompile Include="Class\Myclass97.cpp" />
+    <ClCompile Include="Class\Myclass98.cpp" />
+    <ClCompile Include="Class\Myclass99.cpp" />
+    <ClCompile Include="Class\Myclass133.cpp" />
+    <ClCompile Include="Class\Myfunctionsum127.cpp" />
+    <ClCompile Include="Class\MyUnion128.cpp" />
+    <ClCompile Include="Class\SimpleTimerMutex165.cpp" />
+    <ClCompile Include="Global.cpp" />
+    <ClCompile Include="Sourse.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Class\Myclass100.h" />
+    <ClInclude Include="Class\Myclass101.h" />
+    <ClInclude Include="Class\Myclass102.h" />
+    <ClInclude Include="Class\Myclass103.h" />
+    <ClInclude Include="Class\Myclass104.h" />
+    <ClInclude Include="Class\Myclass107.h" />
+    <ClInclude Include="Class\Myclass109.h" />
+    <ClInclude Include="Class\Myclass111.h" />
+    <ClInclude Include="Class\Myclass112.h" />
+    <ClInclude Include="Class\Myclass113.h" />
+    <ClInclude Include="Class\Myclass114.h" />
+    <ClInclude Include="Class\Myclass115.h" />
+    <ClInclude Include="Class\Myclass116.h" />
+    <ClInclude Include="Class\Myclass117.h" />
+    <ClInclude Include="Class\Myclass118.h" />
+    <ClInclude Include="Class\Myclass119.h" />
+    <ClInclude Include="Class\Myclass120.h" />
+    <ClInclude Include="Class\Myclass121.h" />
+    <ClInclude Include="Class\Myclass123.h" />
+    <ClInclude Include="Class\Myclass124.h" />
+    <ClInclude Include="Class\Myclass125.h" />
+    <ClInclude Include="Class\MyClass126.h" />
+    <ClInclude Include="Class\MyClass127.h" />
+    <ClInclude Include="Class\MyClass129.h" />
+    <ClInclude Include="Class\MyClass130.h" />
+    <ClInclude Include="Class\MyClass131.h" />
+    <ClInclude Include="Class\MyClass132.h" />
+    <ClInclude Include="Class\MyClass134.h" />
+    <ClInclude Include="Class\MyClass136.h" />
+    <ClInclude Include="Class\MyClass137.h" />
+    <ClInclude Include="Class\MyClass138.h" />
+    <ClInclude Include="Class\Myclass139.h" />
+    <ClInclude Include="Class\Myclass140.h" />
+    <ClInclude Include="Class\Myclass141.h" />
+    <ClInclude Include="Class\Myclass142.h" />
+    <ClInclude Include="Class\Myclass143.h" />
+    <ClInclude Include="Class\Myclass144.h" />
+    <ClInclude Include="Class\Myclass145.h" />
+    <ClInclude Include="Class\Myclass146.h" />
+    <ClInclude Include="Class\Myclass147.h" />
+    <ClInclude Include="Class\Myclass148.h" />
+    <ClInclude Include="Class\Myclass149.h" />
+    <ClInclude Include="Class\Myclass150.h" />
+    <ClInclude Include="Class\Myclass151.h" />
+    <ClInclude Include="Class\Myclass152.h" />
+    <ClInclude Include="Class\Myclass153.h" />
+    <ClInclude Include="Class\Myclass154.h" />
+    <ClInclude Include="Class\Myclass155.h" />
+    <ClInclude Include="Class\Myclass156.h" />
+    <ClInclude Include="Class\Myclass158.h" />
+    <ClInclude Include="Class\Myclass159.h" />
+    <ClInclude Include="Class\Myclass160.h" />
+    <ClInclude Include="Class\Myclass161.h" />
+    <ClInclude Include="Class\Myclass162.h" />
+    <ClInclude Include="Class\Myclass163.h" />
+    <ClInclude Include="Class\Myclass164.h" />
+    <ClInclude Include="Class\Myclass165.h" />
+    <ClInclude Include="Class\Myclass166.h" />
+    <ClInclude Include="Class\Myclass167.h" />
+    <ClInclude Include="Class\Myclass168.h" />
+    <ClInclude Include="Class\Myclass169.h" />
+    <ClInclude Include="Class\Myclass20.h" />
+    <ClInclude Include="Class\Myclass22.h" />
+    <ClInclude Include="Class\Myclass24.h" />
+    <ClInclude Include="Class\Myclass25.h" />
+    <ClInclude Include="Class\Myclass26.h" />
+    <ClInclude Include="Class\Myclass27.h" />
+    <ClInclude Include="Class\Myclass28.h" />
+    <ClInclude Include="Class\Myclass29.h" />
+    <ClInclude Include="Class\Myclass30.h" />
+    <ClInclude Include="Class\Myclass51.h" />
+    <ClInclude Include="Class\Myclass57.h" />
+    <ClInclude Include="Class\Myclass58.h" />
+    <ClInclude Include="Class\Myclass59.h" />
+    <ClInclude Include="Class\Myclass60.h" />
+    <ClInclude Include="Class\Myclass61.h" />
+    <ClInclude Include="Class\Myclass62.h" />
+    <ClInclude Include="Class\Myclass63.h" />
+    <ClInclude Include="Class\Myclass64.h" />
+    <ClInclude Include="Class\Myclass65.h" />
+    <ClInclude Include="Class\Myclass66.h" />
+    <ClInclude Include="Class\Myclass67.h" />
+    <ClInclude Include="Class\Myclass68.h" />
+    <ClInclude Include="Class\Myclass70.h" />
+    <ClInclude Include="Class\Myclass71.h" />
+    <ClInclude Include="Class\Myclass73.h" />
+    <ClInclude Include="Class\Myclass74.h" />
+    <ClInclude Include="Class\Myclass75.h" />
+    <ClInclude Include="Class\Myclass76.h" />
+    <ClInclude Include="Class\Myclass77.h" />
+    <ClInclude Include="Class\Myclass78.h" />
+    <ClInclude Include="Class\Myclass79.h" />
+    <ClInclude Include="Class\Myclass80.h" />
+    <ClInclude Include="Class\Myclass81.h" />
+    <ClInclude Include="Class\Myclass82.h" />
+    <ClInclude Include="Class\Myclass83.h" />
+    <ClInclude Include="Class\Myclass84.h" />
+    <ClInclude Include="Class\Myclass85.h" />
+    <ClInclude Include="Class\Myclass86.h" />
+    <ClInclude Include="Class\Myclass87.h" />
+    <ClInclude Include="Class\Myclass88.h" />
+    <ClInclude Include="Class\Myclass89.h" />
+    <ClInclude Include="Class\Myclass90.h" />
+    <ClInclude Include="Class\Myclass91.h" />
+    <ClInclude Include="Class\Myclass92.h" />
+    <ClInclude Include="Class\Myclass93.h" />
+    <ClInclude Include="Class\Myclass94.h" />
+    <ClInclude Include="Class\Myclass95.h" />
+    <ClInclude Include="Class\Myclass96.h" />
+    <ClInclude Include="Class\Myclass97.h" />
+    <ClInclude Include="Class\Myclass98.h" />
+    <ClInclude Include="Class\Myclass99.h" />
+    <ClInclude Include="Class\Myclass133.h" />
+    <ClInclude Include="Class\Myfunctionsum127.h" />
+    <ClInclude Include="Class\MyUnion128.h" />
+    <ClInclude Include="Class\SimpleTimerMutex165.h" />
+    <ClInclude Include="Global.h" />
+    <ClInclude Include="Header.h" />
+    <ClInclude Include="Sourse.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
