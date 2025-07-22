@@ -8,7 +8,7 @@
 #include <string>
 using namespace std;
 /*
-„исто виртуальный диструктор.
+Чисто виртуальный диструктор.
 */
 class A96
 {

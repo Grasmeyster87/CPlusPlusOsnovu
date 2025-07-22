@@ -7,5 +7,5 @@ void Foo111(int value)
     {
         throw exception("„исло меньше 0!!!");
     }
-    cout << "ѕеременна¤ = " << value << endl;
+    cout << "переменная = " << value << endl;
 }
