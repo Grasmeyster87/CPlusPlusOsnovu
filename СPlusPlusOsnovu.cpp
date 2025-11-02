@@ -2657,9 +2657,7 @@ tryAgain:
             cout << " Свой клас exception\n";
 
             try
-            {
-                // Foo121(-55);
-                //Foo121(-55);
+            {                
                 Foo113(-1);
             }
             catch (MyException113& ex)
@@ -2692,7 +2690,7 @@ tryAgain:
 
             PC114 pc;
 
-            pc.SetState(PC114::PCState::OFF);
+            pc.SetState(PC114::PCState::ON);
 
             switch (pc.GetState())
 
@@ -2963,6 +2961,7 @@ tryAgain:
             std::vector<int>::iterator it_124 = myVector124.begin();
             auto it2 = myVector124.begin();
            
+            cout << "\n sort out myVector124" << endl;
             for (auto iter = myVector124.begin(); iter != myVector124.end(); iter++)
             {
                 std::cout << *iter << std::endl;
@@ -2971,6 +2970,7 @@ tryAgain:
             std::vector<int> v = { 1, 2, 3, 4, 5 };
             vector<int>::iterator iter = v.begin();  // получаем итератор
             
+            cout << "\n sort out v" << endl;
             while (iter != v.end())    // пока не дойдем до конца
             {
                 std::cout << *iter << std::endl;// получаем элементы через итератор
@@ -2983,13 +2983,13 @@ tryAgain:
 
             std::vector<int>::const_iterator it; // объявляем итератор только для чтения
             it = myVector.begin(); // присваиваем ему начальный элемент вектора
-            
+
+            cout << "\nsort out myVector" << endl;
             while (it != myVector.end()) // пока итератор не достигнет последнего элемента
             {
                 std::cout << *it << " "; // выводим значение элемента, на который указывает итератор
                 ++it; // и переходим к следующему элементу
-            }          
-            
+            }                      
          
             cout << endl << endl;
             
@@ -3037,6 +3037,10 @@ tryAgain:
 
             int_vector myVector2;
             float_vector myVector3;
+
+            Person126 p126 = { "Алиса", 30 };
+            std::cout << p126.name << " — " << p126.age << " лет" << std::endl;
+
             
             cout << endl << endl;
 

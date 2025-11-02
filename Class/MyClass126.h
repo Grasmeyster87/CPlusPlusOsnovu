@@ -13,4 +13,11 @@
 typedef std::vector<int> int_vector;
 typedef std::vector<float> float_vector;
 
+// Обычное объявление структуры
+typedef struct {
+    std::string name;
+    int age;
+} Person126;
+
+
 #endif 

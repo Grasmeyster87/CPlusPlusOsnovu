@@ -49,7 +49,6 @@ public:
 
 private:
 
-
 	template<typename T>
 	class Node //Клас Node (узел) содержит данные и идрес узла
 	{
@@ -177,11 +176,6 @@ void List<T>::insert(T data, int index)
 		previous->pNext = new Node<T>(data, previous->pNext);//сокращенній код
 		Size++;
 	}
-
-
-
-
-
 }
 
 template<typename T>

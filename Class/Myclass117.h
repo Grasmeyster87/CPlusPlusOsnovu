@@ -49,7 +49,7 @@ public:
     }
     void ShowTypeName()
     {
-        cout << " Название типаЖ " << typeid(T1).name() << endl;// вывод типа переменной
+        cout << " Название типа " << typeid(T1).name() << endl;// вывод типа переменной
     }
 };
 
