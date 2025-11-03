@@ -3084,7 +3084,7 @@ tryAgain:
 
             u.c = 43.54;
 
-            cout << endl << endl;
+            cout << "u.a = "<< u.a << "\n"<< endl << endl;
 
             break;
         }
