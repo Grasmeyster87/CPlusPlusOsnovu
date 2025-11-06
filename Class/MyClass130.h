@@ -13,7 +13,5 @@ int Sum130(int a, int b);
 void Baz130(int a);
 
 
-
-
 void DoWork130(vector<int>& vc, function<void(int)> func);
 #endif  

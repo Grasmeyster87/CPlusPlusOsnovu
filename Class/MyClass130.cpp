@@ -31,10 +31,6 @@ void DoWork130(vector<int>& vc, function<void(int)> func)
 {
     for (auto el : vc)
     {
-
-        for (auto el : vc)
-        {
             func(el);
-        }
     }
 }

@@ -21,7 +21,7 @@ int Sum(int a, int b)
 }
 void Baz(int a)
 {
-    cout << " BAZ " << endl;
+    cout << " BAZ " << a << endl;
 }
 void DoWork(vector<int>& vc)
 {
@@ -30,23 +30,12 @@ void DoWork(vector<int>& vc)
         Bar(el);
     }
 }
-/*
-void DoWork(vector<int>& vc, function<void(int)> f)
-{
-    for (auto el : vc)
-    {
-       // f(el);
-       Bar(el);
-       Foo142(el);
-    }
-}*/
+
 void DoWork(vector<int>& vc, vector<function<void(int)>> funcVector)
 {
     for (auto el : vc)
     {
-        // f(el);
-        //Bar(el);
-       // Foo142(el);
+        
         for (auto& fel : funcVector)
         {
             fel(el);

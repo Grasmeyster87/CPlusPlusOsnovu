@@ -12,15 +12,6 @@ void Bar(int a);
 int Sum(int a, int b);
 void Baz(int a);
 void DoWork(vector<int>& vc);
-/*
-void DoWork(vector<int>& vc, function<void(int)> f)
-{
-    for (auto el : vc)
-    {
-       // f(el);
-       Bar(el);
-       Foo142(el);
-    }
-}*/
+
 void DoWork(vector<int>& vc, vector<function<void(int)>> funcVector);
 #endif  
