@@ -12,16 +12,16 @@ int Sum145(int a, int b)
     return a + b;
 }
 
-    SimpleTimer:: SimpleTimer()
-    {
-        start = chrono::high_resolution_clock::now();
-    };
-    SimpleTimer:: ~SimpleTimer()
-    {
-        end = std::chrono::high_resolution_clock::now();
-        std::chrono::duration<float> duration = end - start;
-        cout << " Duration " << duration.count() << " s " << endl;
-    };
+SimpleTimer:: SimpleTimer()
+{
+    start = chrono::high_resolution_clock::now();
+};
+SimpleTimer:: ~SimpleTimer()
+{
+    end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<float> duration = end - start;
+    cout << " Duration " << duration.count() << " s " << endl;
+};
 
 void Foo()
 {
