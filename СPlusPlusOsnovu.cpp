@@ -3342,7 +3342,7 @@ tryAgain:
             };
 
             int result = count_if(people.begin(), people.end(), people.front());
-            cout << result << endl;
+            cout << "\t result - " << result << endl;
 
             cout << endl << endl;
 

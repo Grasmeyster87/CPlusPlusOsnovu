@@ -9,6 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "docs", "docs", "{36D591C7-6
 	ProjectSection(SolutionItems) = preProject
 		docs\132 (145) How to measure code execution time.md = docs\132 (145) How to measure code execution time.md
 		133 Simple_Code_lesson_(146 Функтори в с _ Что такое функцтор).md = 133 Simple_Code_lesson_(146 Функтори в с _ Что такое функцтор).md
+		134 (147) Predicatu.txt = 134 (147) Predicatu.txt
 	EndProjectSection
 EndProject
 Global
