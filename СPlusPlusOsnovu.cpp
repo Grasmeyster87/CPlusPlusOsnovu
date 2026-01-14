@@ -3414,10 +3414,10 @@ tryAgain:
                 pointer
                 const_pointer
 
-           35) value_type – тип элементов.
-           36) allocator_type – тип аллокатора.
-           37) difference_type / size_type  типы для индексации и размеров
-
+           35) value_type                   тип элементов.
+           36) allocator_type               тип аллокатора.
+           37) difference_type              типы для индексации и размеров
+               size_type
             */
 
             vector<int> myVector = { 0,484,484,999 };
