@@ -3432,7 +3432,7 @@ tryAgain:
 
             // resize 	    Определяет новый размер вектора.
 
-            myVector1.resize(20, 81);// инициализация вектора числом 448
+            myVector1.resize(20, 80);// инициализация вектора числом 448
 
             cout << " Функция capacity в векторе - " << myVector1.capacity() << endl << endl;
 
