@@ -3553,11 +3553,11 @@ tryAgain:
 
             myVector1.reserve(100);
 
-            cout << "  shrink_to_fit 	Удаляет лишнюю емкость - " << myVector1.capacity() << endl << endl;
+            cout << "  Удаляет лишнюю емкость - " << myVector1.capacity() << endl << endl;
 
             myVector1.shrink_to_fit();
 
-            cout << "  shrink_to_fit 	Удаляет лишнюю емкость - " << myVector1.capacity() << endl << endl;
+            cout << "	Удаляет лишнюю емкость - " << myVector1.capacity() << endl << endl;
 
             cout << " Количество элементов в массиве/векторе - myVector1" << myVector1.size() << endl << endl << "\t";
 
