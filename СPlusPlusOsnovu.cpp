@@ -3586,24 +3586,24 @@ tryAgain:
 
             cout << "\n\nback 	Возвращает ссылку на последний элемент вектора." << myVector.back() << endl;
 
-            /* try//блок try/catch для просмотра типа ошибки (выход за границы массива)
+            try//блок try/catch для просмотра типа ошибки (выход за границы массива)
              {
                  cout << "  - " << myVector.at(10) << endl << endl;
              }
              catch (const std::out_of_range & ex)
              {
                  cout << ex.what() << endl << endl;
-             }*/
+             }
 
             cout << "\n---------------------------------------------- e m p l a c e -----------------------------------------------------------------" << endl;
 
-            // emplace 	Вставляет элемент, созданный на месте, в указанное положение в векторе.
-            /*
+            // Метод begin() в контейнере std::vector в C++ возвращает итератор на первый элемент вектора.
+            
             for (int i = 0; i < 10; i++)
             {
                 myVector1[i] = i;
             }
-            */
+            
             vector<int>::iterator iter1 = myVector1.begin();
 
             myVector1.emplace(iter1, 112);
