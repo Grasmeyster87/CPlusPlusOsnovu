@@ -3640,7 +3640,25 @@ tryAgain:
 
             cout << "\n---------------------------------------------- i n s e r t --------------------------------------------------------------------" << endl;
 
-            // insert 	Вставляет элемент или несколько элементов в вектор по заданной позиции.
+            // Вставляет элемент или несколько элементов в вектор по заданной позиции.
+            /*
+            Функція  у C++ STL контейнері  використовується для вставки елементів у довільну позицію вектора. 
+            Це одна з ключових операцій, яка дозволяє додавати нові значення не лише в кінець (як ), а й у будь-яке місце.
+
+            iterator insert (const_iterator pos, const T& value);
+            iterator insert (const_iterator pos, T&& value);
+            iterator insert (const_iterator pos, size_type count, const T& value);
+            template <class InputIterator>
+            iterator insert (const_iterator pos, InputIterator first, InputIterator last);
+            iterator insert (const_iterator pos, std::initializer_list<T> il);
+
+            Пояснення параметрів
+            • 	 – ітератор, що вказує на позицію, перед якою буде вставлено елемент(и).
+            • 	 – значення, яке вставляється.
+            • 	 – кількість копій значення, які потрібно вставити.
+            • 	 – діапазон елементів, які потрібно вставити.
+            • 	 – список ініціалізації (наприклад ).
+            */
 
             myVector1.insert(myVector1.begin(), 40, 333);
 
