@@ -4094,7 +4094,27 @@ tryAgain:
             }
             std::cout << std::endl;
 
+            cout << endl;
+            cout << "\n---------------------------------------------- insert(initializer_list) --------------------------------------------------------------------------" << endl;
+            /*
+            - Вставляет **несколько элементов** из `initializer_list` в указанную позицию `pos`.
+            - Все элементы, начиная с `pos`, сдвигаются вправо.
+-            Возвращает итератор на первый вставленный элемент.
+            */
 
+            std::vector<int> v_initializer_list = { 1, 2, 3, 7, 8 };
+
+            // Вставляем {4, 5, 6} перед элементом со значением 7
+            auto it_v_initializer_list = v_initializer_list.insert(v_initializer_list.begin() + 3, { 4, 5, 6 });
+
+            // Выводим результат
+            for (int x : v_initializer_list) {
+                std::cout << x << " ";
+            }
+            std::cout << std::endl;
+
+            // Проверим, куда указывает итератор
+            std::cout << "Первый вставленный элемент: " << *it_v_initializer_list << std::endl;
             break;
         }
         // Simple_Code_lesson_(150_STL(Библиотека стандартных шаблонов)_2_Итераторы)
