@@ -4065,7 +4065,20 @@ tryAgain:
             for (int x : v) {
                 std::cout << x << " ";
             }
+            cout << endl;
+            cout << "\n---------------------------------------------- const_pointer --------------------------------------------------------------------------" << endl;
+            std::vector<int> v_const_pointer = { 10, 20, 30, 40 };
 
+            // Получаем const_pointer на первый элемент
+            std::vector<int>::const_pointer p_const_pointer = v_const_pointer.data();
+
+            // Выводим элементы через const_pointer
+            for (size_t i = 0; i < v_const_pointer.size(); ++i) {
+                std::cout << *(p_const_pointer + i) << " ";  // доступ только для чтения
+            }
+            std::cout << std::endl;
+
+            // *(p + 1) = 100;  // Ошибка! const_pointer не позволяет изменять значения
 
             break;
         }
