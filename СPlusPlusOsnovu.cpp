@@ -4080,6 +4080,21 @@ tryAgain:
 
             // *(p + 1) = 100;  // Ошибка! const_pointer не позволяет изменять значения
 
+            cout << endl;
+            cout << "\n---------------------------------------------- assign(initializer_list) --------------------------------------------------------------------------" << endl;
+            // initializer_list - Полностью заменяет содержимое контейнера новыми элементами из 
+
+            std::vector<int> v_initializer_list = { 1, 2, 3 };
+
+            // Перезаписываем содержимое вектора
+            v_initializer_list.assign({ 10, 20, 30, 40 });
+
+            for (int x : v_initializer_list) {
+                std::cout << x << " ";
+            }
+            std::cout << std::endl;
+
+
             break;
         }
         // Simple_Code_lesson_(150_STL(Библиотека стандартных шаблонов)_2_Итераторы)
