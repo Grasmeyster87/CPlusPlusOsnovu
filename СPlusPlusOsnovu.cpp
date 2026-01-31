@@ -4162,7 +4162,34 @@ tryAgain:
 
             alloc.deallocate(p, 5);
             */
+            cout << endl;
+            cout << "\n---------------------------------------------- difference_type --------------------------------------------------------------------------" << endl;
+            /*
+            В C++ **`difference_type`** — это *типовой псевдоним* (type alias), который определяет тип для представления разности между двумя итераторами или указателями.  
 
+            ---
+
+            ## Основные моменты
+            - **Определение:**  
+                 `difference_type` — это целочисленный тип (обычно знаковый), который используется для хранения расстояния между элементами в контейнере или массиве.  
+            - **Где встречается:**  
+                - В стандартных контейнерах (`std::vector`, `std::list`, `std::map` и др.).  
+                - В итераторах (`iterator_traits` определяет `difference_type`).  
+                - В аллокаторах (`Allocator::difference_type`).
+            */
+            /*
+            std::vector<int> v = {10, 20, 30, 40, 50};
+
+            auto it1 = v.begin();
+            auto it2 = v.end();
+
+            // Получаем тип difference_type через iterator_traits
+             using diff_t = std::iterator_traits<std::vector<int>::iterator>::difference_type;
+
+            diff_t dist = std::distance(it1, it2);
+
+            std::cout << "Расстояние между begin и end: " << dist << std::endl;
+            */
             break;
         }
         // Simple_Code_lesson_(150_STL(Библиотека стандартных шаблонов)_2_Итераторы)
