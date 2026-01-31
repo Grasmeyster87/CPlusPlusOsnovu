@@ -4131,7 +4131,37 @@ tryAgain:
             std::vector<int>::value_type x = v_value_type[0];
 
             std::cout << "Первый элемент: " << x << std::endl;
+            cout << endl;
+            cout << "\n---------------------------------------------- allocator_type --------------------------------------------------------------------------" << endl;
+            /*
+            В C++ `allocator_type` — это *типовой псевдоним* (type alias), 
+            который определяет используемый аллокатор для контейнера стандартной библиотеки. 
+            Он не является функцией, а частью интерфейса контейнеров (например, `std::vector`, `std::list`, `std::map`).
+             Что такое `allocator_type`
+            - Определение:
+            В каждом стандартном контейнере (кроме `std::array`) есть параметр шаблона `Allocator`.
+            Контейнер объявляет публичный псевдоним `allocator_type`, который указывает на тип этого аллокатора.
+            */
+            /*std::vector<int> v;  
+            // Получаем тип аллокатора
+            using alloc_t = std::vector<int>::allocator_type;
+    
+             // Создаём объект аллокатора
+             alloc_t alloc = v.get_allocator();
 
+            // Выделяем память через аллокатор
+            int* p = alloc.allocate(5);
+            for (int i = 0; i < 5; ++i) {
+                 alloc.construct(&p[i], i * 10);
+            }
+    
+            for (int i = 0; i < 5; ++i) {
+                 std::cout << p[i] << " ";
+                alloc.destroy(&p[i]);
+            }
+
+            alloc.deallocate(p, 5);
+            */
 
             break;
         }
