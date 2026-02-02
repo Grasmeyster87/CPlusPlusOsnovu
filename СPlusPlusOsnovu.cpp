@@ -4361,6 +4361,25 @@ tryAgain:
             
             cout << endl << endl;
 
+            cout << "\n" << endl;
+            cout << " ============================================================================================" << endl << endl;
+            // Поиск элемента
+            auto it137 = std::find(myVector137.begin(), myVector137.end(), 8);
+            if (it137 != myVector137.end()) {
+                std::cout << "Найден элемент: " << *it137 << std::endl;
+            }
+            
+            // Сортировка
+            std::sort(myVector137.begin(), myVector137.end());
+            std::cout << "Отсортированный вектор: ";
+            for (auto i : myVector137) std::cout << i << " ";
+            std::cout << std::endl;
+
+            // for_each с лямбдой
+            std::for_each(myVector137.begin(), myVector137.end(), [](int x) { std::cout << x * x << " "; });
+            std::cout << std::endl;
+
+
             break;
         }
         // Simple_Code_lesson_(151_STL(Библиотека стандартных шаблонов)_3_LIST)
