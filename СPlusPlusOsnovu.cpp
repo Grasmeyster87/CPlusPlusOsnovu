@@ -4738,6 +4738,22 @@ tryAgain:
             std::cout << "Новий перший елемент: " << numbers_front.front() << std::endl;
 
             cout << endl << endl;
+
+            cout << " ========================================= back =========================================================" << endl << endl;
+            /*
+            Функція back() у std::list є логічним "близнюком" функції front(). Вона надає прямий доступ до останнього елемента контейнера.
+            */
+            std::list<std::string> tasks_back = { "Task 1", "Task 2", "Final Task" };
+
+            // Читання останнього елемента
+            std::cout << "Останнє завдання: " << tasks_back.back() << std::endl;
+
+            // Зміна останнього елемента
+            tasks_back.back() = "Updated Final Task";
+
+            std::cout << "Оновлене останнє завдання: " << tasks_back.back() << std::endl;
+
+            cout << endl << endl;
             
             break;
         }
