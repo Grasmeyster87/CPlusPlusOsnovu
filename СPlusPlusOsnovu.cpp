@@ -4843,6 +4843,35 @@ tryAgain:
             }
 
             cout << endl << endl;
+
+            cout << " ========================================= emplace(pos, args...) =========================================================" << endl << endl;
+            /*
+            * У `std::list` є метод **`emplace`**, який схожий на `insert`, але має важливу відмінність: 
+            він створює об’єкт **безпосередньо на місці** (in-place), 
+            використовуючи передані аргументи конструктора, замість копіювання чи переміщення вже готового об’єкта.
+            - **`pos`** – ітератор, що вказує на позицію, перед якою буде створено новий елемент.  
+            - **`args...`** – аргументи, які передаються конструктору типу `T`.  
+            - **Повертає** – ітератор на щойно створений елемент.
+            */
+
+            struct Person_emplace {
+                std::string name;
+                int age;
+
+                Person_emplace(const std::string& n, int a) : name(n), age(a) {}
+            };
+
+            std::list<Person_emplace> people_emplace;
+
+            // Створюємо об'єкт Person безпосередньо у списку
+            people_emplace.emplace(people_emplace.begin(), "Alice", 30);
+            people_emplace.emplace(people_emplace.end(), "Bob", 25);
+
+            for (const auto& p : people_emplace) {
+                std::cout << p.name << " (" << p.age << ")\n";
+            }
+
+            cout << endl << endl;
             
             break;
         }
