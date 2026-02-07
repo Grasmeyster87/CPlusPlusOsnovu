@@ -4905,6 +4905,41 @@ tryAgain:
                 std::cout << p.name << " (" << p.age << ")\n";
             }
             
+            cout << endl << endl;
+
+            cout << " ========================================= emplace_front(args...) =========================================================" << endl << endl;
+            /*
+            `std::list::emplace_front` — це метод, який додає новий елемент **на початок списку**, створюючи його безпосередньо на місці (in-place) за допомогою переданих аргументів конструктора.
+
+            ### Синтаксис
+            ```cpp
+            void emplace_front(Args&&... args);
+            ```
+
+            ### Пояснення
+            - **`args...`** — аргументи, які передаються конструктору типу `T`.  
+            - Елемент створюється прямо на початку контейнера, без проміжного копіювання чи переміщення.  
+            - Не повертає значення.
+            */
+            struct Person_emplace_front {
+                std::string name;
+                int age;
+
+                Person_emplace_front(const std::string& n, int a) : name(n), age(a) {
+                    std::cout << "Constructing " << name << "\n";
+                }
+            };
+
+            std::list<Person_emplace_front> people_emplace_front;
+
+            // Створюємо об'єкти безпосередньо на початку списку
+            people_emplace_front.emplace_front("Alice", 30);
+            people_emplace_front.emplace_front("Bob", 25);
+
+            for (const auto& p : people_emplace_front) {
+                std::cout << p.name << " (" << p.age << ")\n";
+            }
+
 
             cout << endl << endl;
             
