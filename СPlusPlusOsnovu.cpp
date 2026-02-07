@@ -4872,6 +4872,41 @@ tryAgain:
             }
 
             cout << endl << endl;
+
+            cout << " ========================================= emplace_back(args...) =========================================================" << endl << endl;
+            /*
+            `std::list::emplace_back` — це метод, який додає новий елемент **у кінець списку**, створюючи його безпосередньо на місці (in-place) за допомогою переданих аргументів конструктора.
+
+            Синтаксис
+            ```cpp
+            void emplace_back(Args&&... args);
+            ```
+
+            ### Пояснення
+            - **`args...`** — аргументи, які передаються конструктору типу `T`.  
+            - Елемент створюється прямо в контейнері, без проміжного копіювання чи переміщення.  
+            - Не повертає значення (на відміну від `emplace`, який повертає ітератор).
+            */
+            struct Person_emplace_back {
+                std::string name;
+                int age;
+
+                Person_emplace_back(const std::string& n, int a) : name(n), age(a) {
+                    std::cout << "Constructing " << name << "\n";
+                }
+            };
+            std::list<Person_emplace_back> people_emplace_back;
+
+            // Створюємо об'єкти безпосередньо у кінці списку
+            people_emplace_back.emplace_back("Alice", 30);
+            people_emplace_back.emplace_back("Bob", 25);
+
+            for (const auto& p : people_emplace_back) {
+                std::cout << p.name << " (" << p.age << ")\n";
+            }
+            
+
+            cout << endl << endl;
             
             break;
         }
