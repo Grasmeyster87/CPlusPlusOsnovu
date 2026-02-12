@@ -18,6 +18,6 @@ void PrintList139(const list<T>& lst)// Шаблон для вывода спи�
     {
         cout << *i << "\t";
     }
-    cout << "\n\n";
+    cout << "\n";
 }
 #endif
