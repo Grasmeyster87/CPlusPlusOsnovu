@@ -5364,10 +5364,31 @@ tryAgain:
 
             deque<int>::iterator c1_it = dq143.begin();
 
+            cout << endl << endl;
             cout << " =========================================== push_back =======================================================" << endl << endl;
+            // push_back()  Добавляет элемент в конец 
 
             dq143.push_back(10);
 
+            cout << "\tВыводим контейнер dq143" << endl;
+
+            for (auto el : dq143)
+            {
+                cout << el << endl;
+			}			
+
+            cout << endl << endl;
+            cout << " =========================================== push_front =======================================================" << endl << endl;
+            // push_front()  Добавляет элемент в начало 
+
+            dq143.push_front(5);
+
+            cout << "\tВыводим контейнер dq143" << endl;
+
+            for (auto el : dq143)
+            {
+                cout << el << endl;
+            }
             cout << endl << endl;
 
             break;
