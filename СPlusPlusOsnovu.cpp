@@ -5389,6 +5389,31 @@ tryAgain:
             {
                 cout << el << endl;
             }
+
+            cout << endl << endl;
+            cout << " =========================================== insert(pos, val) =======================================================" << endl << endl;
+            /*
+             В `std::deque` функция `insert` используется для вставки элементов в произвольную позицию. Она перегружена и имеет несколько вариантов
+            `iterator insert(iterator pos, const value_type& val)`  Вставляет один элемент `val` перед позицией `pos`. Возвращает итератор на вставленный элемент. 
+             `void insert(iterator pos, size_type n, const value_type& val)`  Вставляет `n` копий элемента `val` перед позицией `pos`. 
+             `void insert(iterator pos, InputIterator first, InputIterator last)`  Вставляет диапазон элементов `[first, last)` перед позицией `pos`. 
+            */
+
+            
+
+            // Вставка одного элемента
+            dq143.insert(dq143.begin() + 2, 99); // {1, 2, 99, 3, 4}
+
+            // Вставка нескольких одинаковых элементов
+            dq143.insert(dq143.begin() + 1, 3, 77); // {1, 77, 77, 77, 2, 99, 3, 4}
+
+            // Вставка диапазона
+            std::vector<int> v143 = { 10, 20, 30 };
+            dq143.insert(dq143.begin() + 4, v143.begin(), v143.end());
+
+            for (int x : dq143) std::cout << x << " ";
+
+
             cout << endl << endl;
 
             break;
