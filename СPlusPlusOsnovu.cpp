@@ -5437,6 +5437,19 @@ tryAgain:
             */
             int size143 = dq143.size();
 			cout << "\tВыводим количество элементов в контейнере dq143 - " << size143 << endl;
+
+            cout << endl << endl;
+            cout << " =========================================== empty() =======================================================" << endl << endl;
+            /*
+            `empty()` - Проверяет, пуст ли контейнер 
+            */
+            if (dq143.empty()) {
+                std::cout << "Deque is empty\n";
+            }
+            else {
+				std::cout << "Deque is not empty\n";
+            }
+
             cout << endl << endl;
 
             break;
