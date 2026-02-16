@@ -5470,6 +5470,25 @@ tryAgain:
             dq143.back() = 94; // можно изменить последний элемент
             std::cout << "После изменения: " << dq143.back() << "\n";
 
+
+            cout << endl << endl;
+            cout << " =========================================== back() =======================================================" << endl << endl;
+            /*
+            `clear()`  Удаляет все элементы 
+            */
+            dq143.clear();
+            if (dq143.empty()) {
+                std::cout << "Deque is empty after clear()\n";
+            }
+            else {
+                std::cout << "Deque is not empty after clear()\n";
+			}
+
+            for (int i = 0; i < 1000; i++) {
+                dq143.push_back(rand() % 100);
+            }
+			cout << "\tВыводим контейнер dq143 после заполнения рандомными числами - " << endl;
+			for (int x : dq143) std::cout << x << " ";
             cout << endl << endl;
 
             break;
