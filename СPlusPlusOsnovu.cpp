@@ -5591,6 +5591,32 @@ tryAgain:
             }
 
             cout << endl << endl;
+            cout << " =========================================== emplace_back() =======================================================" << endl << endl;
+            /*
+            Функция **`emplace_back()`** в контейнере `std::deque` вставляет новый элемент **в конец дека**. 
+            Она конструирует объект непосредственно на месте (in-place), 
+            используя переданные аргументы, что делает её более эффективной по сравнению с `push_back()`, 
+            который копирует или перемещает уже готовый объект.
+            */
+
+            struct Person_emplace_back {
+                string name;
+                int age;
+                Person_emplace_back(string n, int a) : name(n), age(a) {}
+            };
+
+            deque<Person_emplace_back> dq_emplace_back;
+
+            // Создание объектов прямо в конце дека
+            dq_emplace_back.emplace_back("Alice", 30);
+            dq_emplace_back.emplace_back("Bob", 25);
+
+            for (const auto& p : dq_emplace_back) {
+                cout << p.name << " (" << p.age << ")" << endl;
+            }
+
+
+            cout << endl << endl;
 
             break;
         }
