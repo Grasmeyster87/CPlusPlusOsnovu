@@ -5502,6 +5502,17 @@ tryAgain:
             for (int x : d143) {
                 std::cout << x << " ";
             }
+            cout << endl << endl;
+            cout << " =========================================== begin() =======================================================" << endl << endl;
+            // Функция `begin()` в контейнере **`std::deque`** возвращает итератор на первый элемент дека. 
+
+            auto it143_begin = d143.begin();
+            cout << "Первый элемент: " << *it143_begin << endl;
+
+            // Перебор всех элементов с помощью begin() и end()
+            for (auto itr = d143.begin(); itr != d143.end(); ++itr) {
+                cout << *itr << " ";
+            }
 
             cout << endl << endl;
 
