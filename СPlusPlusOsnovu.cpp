@@ -5549,6 +5549,25 @@ tryAgain:
                 cout << *it_rend << " ";
             }
 
+
+            cout << endl << endl;
+            cout << " =========================================== resize(n) =======================================================" << endl << endl;
+            /*
+            Функция **`resize(n)`** в контейнере `std::deque` изменяет количество элементов в деке.  
+            */
+
+            deque<int> dq_resize = { 1, 2, 3, 4, 5 };
+
+            dq_resize.resize(3);  // уменьшение
+            cout << "После resize(3): ";
+            for (int x : dq_resize) cout << x << " ";
+            cout << endl;
+
+            dq_resize.resize(6, 9);  // увеличение с заполнением
+            cout << "После resize(6, 9): ";
+            for (int x : dq_resize) cout << x << " ";
+            cout << endl;
+
             cout << endl << endl;
 
             break;
