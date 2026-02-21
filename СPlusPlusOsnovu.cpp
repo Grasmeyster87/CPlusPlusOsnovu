@@ -5569,6 +5569,28 @@ tryAgain:
             cout << endl;
 
             cout << endl << endl;
+            cout << " =========================================== emplace_front() =======================================================" << endl << endl;
+            /*
+            Функция **`emplace_front()`** в контейнере `std::deque` используется для вставки нового элемента **в начало дека**. 
+            В отличие от `push_front()`, она конструирует объект прямо на месте (in-place), что позволяет избежать лишнего копирования или перемещения.
+            */
+            struct Person_emplace_front {
+                string name;
+                int age;
+                Person_emplace_front(string n, int a) : name(n), age(a) {}
+            };
+
+            deque<Person_emplace_front> dq_emplace_front;
+
+            // Создание объекта прямо в деке
+            dq_emplace_front.emplace_front("Alice", 30);
+            dq_emplace_front.emplace_front("Bob", 25);
+
+            for (const auto& p : dq_emplace_front) {
+                cout << p.name << " (" << p.age << ")" << endl;
+            }
+
+            cout << endl << endl;
 
             break;
         }
