@@ -5654,6 +5654,20 @@ tryAgain:
                 std::cerr << "Исключение: " << e.what() << std::endl;
             }
 
+            cout << endl << endl;
+            cout << " =========================================== swap() =======================================================" << endl << endl;
+            /*
+            Функция **`swap()`** в контейнере `std::deque` используется для обмена содержимым двух деков одинакового типа.
+            */
+            std::deque<int> d1_swap = { 1, 2, 3 };
+            std::deque<int> d2_swap = { 10, 20, 30, 40 };
+
+            d1_swap.swap(d2);
+
+            std::cout << "d1: ";
+            for (int x : d1_swap) std::cout << x << " "; // 10 20 30 40
+            std::cout << "\nd2: ";
+            for (int x : d2_swap) std::cout << x << " "; // 1 2 3
 
             cout << endl << endl;
 
