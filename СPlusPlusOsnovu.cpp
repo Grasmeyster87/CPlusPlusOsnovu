@@ -5662,7 +5662,7 @@ tryAgain:
             std::deque<int> d1_swap = { 1, 2, 3 };
             std::deque<int> d2_swap = { 10, 20, 30, 40 };
 
-            d1_swap.swap(d2);
+            d1_swap.swap(d2_swap);
 
             std::cout << "d1: ";
             for (int x : d1_swap) std::cout << x << " "; // 10 20 30 40
