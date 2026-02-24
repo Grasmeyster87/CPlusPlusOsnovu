@@ -5849,8 +5849,46 @@ tryAgain:
 
             cout << endl << endl;
 
-            cout << " ==================================================================================================" << endl << endl;
+            cout << " ============================================ erase(iterator) ======================================================" << endl << endl;
+            /*
+            Метод `erase(iterator)` у контейнера `std::set` удаляет элемент по итератору. 
+            */
 
+            auto it_erase = mySet.find(30); // находим элемент 30
+            if (it_erase != mySet.end()) {
+                auto next_it_erase = mySet.erase(it_erase); // удаляем по итератору
+                cout << "Следующий элемент после удалённого: ";
+                if (next_it_erase != mySet.end())
+                    cout << *next_it_erase << endl;
+                else
+                    cout << "end()" << endl;
+            }
+
+            for (int x : mySet) {
+                cout << x << " ";
+            }
+
+            cout << endl << endl;
+
+            cout << " ============================================ clear() ======================================================" << endl << endl;
+            // Метод `clear()` у контейнера `std::set` полностью очищает множество, удаляя все элементы.
+            cout << "Размер до clear: " << mySet.size() << endl;
+
+            mySet.clear(); // очищаем множество
+
+            cout << "Размер после clear: " << mySet.size() << endl;
+
+            if (mySet.empty()) {
+                cout << "Множество пустое" << endl;
+            }
+
+            for (int i = 0; i < 100; i += 2) {
+				mySet.insert(i);
+            }
+
+            for (int x : mySet) {
+                cout << x << " ";
+            }
             cout << endl << endl;
 
             break;
