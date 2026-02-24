@@ -5834,97 +5834,17 @@ tryAgain:
                        
             cout << endl << endl;
 
-            cout << " ==================================================================================================" << endl << endl;
+            cout << " ============================================ erase(value) ======================================================" << endl << endl;
+            /*
+            В C++ контейнер `std::set` имеет метод `erase(value)`, который удаляет элемент по значению.  
+            */
+            // Удаляем элемент со значением 3
+            size_t erased = mySet.erase(6);
 
-            set<int>mySet1;
+            cout << "Удалено элементов: " << erased << endl;
 
-            for (int i = 0; i < 20; i++)
-            {
-                mySet1.insert(rand() % 100);
-            }
-
-            cout << "\t Выводим бинарное дерево mySet1 - \t";
-
-            int bb = 0;
-
-            for (auto& item1 : mySet1)
-            {
-                cout << item1 << "\t";
-
-                bb++;
-                if (bb == 5 || bb == 10 || bb == 15)
-                {
-                    cout << "\n\n\t\t\t\t\t\t";
-                }
-
-            }
-
-            cout << endl << endl;
-
-            cout << " ==================================================================================================" << endl << endl;
-
-            auto it = mySet.find(5); //ищем число 10, исли его нету то получим  mySet.end() указатель в никуда
-
-           // mySet.end();
-
-            //cout << " ==================================================================================================" << endl << endl;
-
-            int value;
-
-            cout << "\tВведите число для поиска:";
-
-            cin >> value;
-
-            if (mySet.find(value) != mySet.end())
-            {
-                cout << "\tЧисло: " << value << " найдено!" << endl << endl;
-            }
-            else
-            {
-                cout << "\tЧисло: " << value << " отсутствует" << endl << endl;
-            }
-
-            cout << " ============================= =====================================================================" << endl << endl;
-
-            cout << "\t Удаление елемента бинарного дерева методм mySet.erase(5)\n\n\t";
-
-            mySet.erase(5);
-
-            mySet.insert(64);
-
-            mySet.erase(4444);// В случае попытки удаления несуществующего числа ничего не произойдет
-
-            auto result = mySet.erase(4444);
-
-            for (auto& item : mySet)
-            {
-                cout << item << "\t";
-            }
-
-            cout << endl << endl;
-
-            cout << " ==================================================================================================" << endl << endl;
-
-            multiset<int> myMyltiset = { 1,1,66,16,48,99 };
-
-            cout << "\t Выводим контейнер myMyltiset\n\n\t";
-
-            auto it1 = myMyltiset.lower_bound(1);
-
-            auto it2 = myMyltiset.upper_bound(1);
-
-            auto it3 = myMyltiset.equal_range(1);// возвращает итератор на диапазон .lower_bound - upper_bound
-
-            for (auto& item1 : myMyltiset)
-            {
-                cout << item1 << "\t";
-
-                bb++;
-                if (bb == 5 || bb == 10 || bb == 15)
-                {
-                    cout << "\n\n\t\t\t\t\t\t";
-                }
-
+            for (int x : mySet) {
+                cout << x << " ";
             }
 
             cout << endl << endl;
