@@ -5889,6 +5889,34 @@ tryAgain:
             for (int x : mySet) {
                 cout << x << " ";
             }
+
+            cout << endl << endl;
+
+            cout << " ============================================ swap(other) ======================================================" << endl << endl;
+            /*
+            `swap(other)` — обмен содержимым двух множеств.
+            */
+            set<int> s1144_swap = { 1, 2, 3 };
+            set<int> s2144_swap = { 10, 20, 30, 40 };
+
+            cout << "До swap:" << endl;
+            cout << "s1144_swap: ";
+            for (int x : s1144_swap) cout << x << " ";
+            cout << "\ns2144_swap: ";
+            for (int x : s2144_swap) cout << x << " ";
+            cout << "\n";
+
+            s1144_swap.swap(s2144_swap); // обмен множеств
+
+            cout << "После swap:" << endl;
+            cout << "s1144_swap: ";
+            for (int x : s1144_swap) cout << x << " ";
+            cout << "\ns2144_swap: ";
+            for (int x : s2144_swap) cout << x << " ";
+            cout << "\n";
+
+
+
             cout << endl << endl;
 
             break;
