@@ -5922,7 +5922,7 @@ tryAgain:
             /*
             Метод `find(value)` у контейнера `std::set` используется для поиска элемента по значению. 
             */
-            auto it144_find = mySet.find(12); // ищем элемент 15
+            auto it144_find = mySet.find(12); // ищем элемент 12
             if (it144_find != mySet.end()) {
                 cout << "Найден элемент: " << *it144_find << endl;
             }
@@ -5930,6 +5930,19 @@ tryAgain:
                 cout << "Элемент не найден" << endl;
             }
 
+            cout << endl << endl;
+
+            cout << " ============================================ begin() ======================================================" << endl << endl;
+
+            // Access first element
+            cout << "First element: " << *mySet.begin() << endl;
+
+            // Iterate through the set
+            cout << "Set elements: ";
+            for (auto it = mySet.begin(); it != mySet.end(); ++it) {
+                cout << *it << " ";
+            }
+            cout << endl;
             cout << endl << endl;
 
             break;
