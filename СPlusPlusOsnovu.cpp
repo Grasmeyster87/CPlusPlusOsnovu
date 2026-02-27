@@ -5933,7 +5933,9 @@ tryAgain:
             cout << endl << endl;
 
             cout << " ============================================ begin() ======================================================" << endl << endl;
-
+            /*
+            `begin()`  — итератор на начала
+            */
             // Access first element
             cout << "First element: " << *mySet.begin() << endl;
 
@@ -5943,6 +5945,19 @@ tryAgain:
                 cout << *it << " ";
             }
             cout << endl;
+
+            cout << endl << endl;
+
+            cout << " ============================================ end() ======================================================" << endl << endl;
+            /*
+            end() — итератор конца.
+            */
+
+            // Итерация от начала до конца
+            for (auto it = mySet.begin(); it != mySet.end(); ++it) {
+                std::cout << *it << " ";
+            }
+
             cout << endl << endl;
 
             break;
