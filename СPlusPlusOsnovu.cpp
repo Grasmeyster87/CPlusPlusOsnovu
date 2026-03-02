@@ -6061,6 +6061,30 @@ tryAgain:
             else
                 cout << "Элемент не найден (все ≤ 5)" << endl;
 
+
+            cout << endl << endl;
+
+            cout << " ============================================ equal_range(value) ======================================================" << endl << endl;
+            /*
+            Возвращает пару итераторов:
+                  - `first` → указывает на первый элемент, который **не меньше** `key` (эквивалент `lower_bound(key)`).
+                  - `second` → указывает на первый элемент, который **строго больше** `key` (эквивалент `upper_bound(key)`).
+
+                Таким образом, диапазон `[first, second)` охватывает все элементы, равные `key`.
+            */
+
+            auto range_equal_range = mySet.equal_range(5);
+
+            if (range_equal_range.first != mySet.end())
+                cout << "lower_bound: " << *range_equal_range.first << endl;
+            else
+                cout << "lower_bound: end()" << endl;
+
+            if (range_equal_range.second != mySet.end())
+                cout << "upper_bound: " << *range_equal_range.second << endl;
+            else
+                cout << "upper_bound: end()" << endl;
+
             cout << endl << endl;
 
             break;
