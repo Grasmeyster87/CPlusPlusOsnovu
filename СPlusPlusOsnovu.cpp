@@ -6042,6 +6042,25 @@ tryAgain:
                 cout << "Найден элемент: " << *it << endl;
             else
                 cout << "Элемент не найден (все меньше 4)" << endl;
+
+
+            cout << endl << endl;
+
+            cout << " ============================================ upper_bound(value) ======================================================" << endl << endl;
+            /*
+            В C++ контейнер `std::set` предоставляет метод `upper_bound(value)`, который используется для поиска элемента в множестве.
+            */
+            auto it_upper_bound = mySet.upper_bound(5);
+
+            for (auto it = mySet.begin(); it != mySet.end(); ++it) {
+                cout << *it << " ";
+            }
+            cout << endl << endl;
+            if (it_upper_bound != mySet.end())
+                cout << "Найден элемент: " << *it_upper_bound << endl;
+            else
+                cout << "Элемент не найден (все ≤ 5)" << endl;
+
             cout << endl << endl;
 
             break;
