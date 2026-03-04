@@ -6215,6 +6215,27 @@ tryAgain:
             for (int x : a_swap) std::cout << "a: " << x << "\n";
             for (int x : b_swap) std::cout << "b: " << x << "\n";
 
+            cout << endl << endl;
+
+            cout << " ============================================ Multiset - find(value) ======================================================" << endl << endl;
+            /*
+            Что делает `find(value)`
+            - Ищет **первый элемент**, равный `value`.
+            - Возвращает **итератор** на найденный элемент.
+            - Если элемент не найден — возвращает `end()`.
+            - Время работы: **O(log n)**, так как поиск идёт по сбалансированному дереву.
+            */
+
+            std::multiset<int> ms_find = { 1, 2, 2, 3, 4 };
+
+            auto it_find = ms_find.find(2);
+
+            if (it_find != ms_find.end()) {
+                std::cout << "Найден элемент: " << *it_find << "\n";
+            }
+            else {
+                std::cout << "Элемент не найден\n";
+            }
 
             cout << endl << endl;
 
