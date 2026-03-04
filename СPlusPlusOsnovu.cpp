@@ -6198,6 +6198,26 @@ tryAgain:
 
             cout << endl << endl;
 
+            cout << " ============================================ Multiset - swap(other) ======================================================" << endl << endl;
+            /*
+            Меняет местами содержимое двух multiset.
+            */
+            std::multiset<int> a_swap = { 1, 2, 2, 3 };
+            std::multiset<int> b_swap = { 10, 20, 30 };
+
+            std::cout << "До swap:\n";
+            for (int x : a_swap) std::cout << "a_swap: " << x << "\n";
+            for (int x : b_swap) std::cout << "b_swap: " << x << "\n";
+
+            a_swap.swap(b_swap);
+
+            std::cout << "\nПосле swap:\n";
+            for (int x : a_swap) std::cout << "a: " << x << "\n";
+            for (int x : b_swap) std::cout << "b: " << x << "\n";
+
+
+            cout << endl << endl;
+
             break;
         }
         // Simple_Code_lesson_(158_STL(Библиотека стандартных шаблонов)_10_MAP_MULTIMAP)
