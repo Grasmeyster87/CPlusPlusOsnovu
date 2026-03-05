@@ -6305,6 +6305,27 @@ tryAgain:
             if (it_upperbound == ms_upperbound.end())
                 cout << "upper_bound(40): end()" << endl;
 
+            cout << endl << endl;
+
+            cout << " ============================================ Multiset - equal_range(value) ======================================================" << endl << endl;
+            /*
+            В `std::multiset` функция **`equal_range(value)`** возвращает пару итераторов (`std::pair<iterator, iterator>`), 
+            которые указывают на диапазон элементов, равных заданному значению.  
+
+                ### Как это работает
+                - Первый итератор (`first`) указывает на **первый элемент, не меньший чем `value`** (эквивалент `lower_bound(value)`).
+                - Второй итератор (`second`) указывает на **первый элемент, больший чем `value`** (эквивалент `upper_bound(value)`).
+                - Таким образом, диапазон `[first, second)` охватывает все элементы, равные `value`.
+            */
+            std::multiset<int> ms_equal_range = { 1, 2, 2, 2, 3, 4, 5 };
+
+            auto rangeEqualRange = ms_equal_range.equal_range(2);
+
+            std::cout << "Элементы равные 2: ";
+            for (auto it = rangeEqualRange.first; it != rangeEqualRange.second; ++it) {
+                std::cout << *it << " ";
+            }
+            std::cout << "\n";
 
             cout << endl << endl;
 
