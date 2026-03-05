@@ -6337,6 +6337,31 @@ tryAgain:
 
             cout << endl << endl;
 
+            cout << " ============================================ Multiset - empty() ======================================================" << endl << endl;
+            /*
+            В `std::multiset` метод **`empty()`** проверяет, есть ли элементы в контейнере.  
+
+                ### Особенности
+                - Возвращает `true`, если контейнер пуст (не содержит элементов).  
+                - Возвращает `false`, если в контейнере есть хотя бы один элемент.  
+                - Тип возвращаемого значения: `bool`.  
+                - Время выполнения: **O(1)**.
+            */
+            std::multiset<int> ms_empty;
+
+            if (ms_empty.empty()) {
+                std::cout << "multiset пуст\n";
+            }
+
+            ms_empty.insert(10);
+
+            if (!ms_empty.empty()) {
+                std::cout << "multiset не пуст, размер = " << ms_empty.size() << "\n";
+            }
+
+
+            cout << endl << endl;
+
             break;
         }
         // Simple_Code_lesson_(158_STL(Библиотека стандартных шаблонов)_10_MAP_MULTIMAP)
