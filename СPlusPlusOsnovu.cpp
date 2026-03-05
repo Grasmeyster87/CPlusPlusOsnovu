@@ -6254,6 +6254,40 @@ tryAgain:
             
             cout << endl << endl;
 
+            cout << " ============================================ Multiset - lower bound(value) ======================================================" << endl << endl;
+            /*
+            В C++ контейнер `std::multiset` имеет метод **`lower_bound(value)`**, который возвращает итератор на первый элемент, **не меньший** чем переданное значение.  
+
+            ### 📌 Основные моменты
+            - **Синтаксис:**  
+              ```cpp
+              multiset_name.lower_bound(key);
+              ```
+            - **Параметр:**  
+              `key` — значение, для которого ищем нижнюю границу.
+            - **Возвращаемое значение:**  
+              Итератор на первый элемент, который **не меньше `key`**.  
+              - Если элемент равный `key` существует → итератор указывает на него.  
+              - Если такого элемента нет → итератор указывает на ближайший больший элемент.  
+              - Если все элементы меньше `key` → возвращается `end()`.
+            */
+
+            multiset<int> ms_lowerbound = { 10, 20, 20, 30, 40 };
+
+            auto it_lowerbound = ms_lowerbound.lower_bound(20);
+            cout << "lower_bound(20): " << *it_lowerbound << endl; // Выведет 20
+
+            it_lowerbound = ms_lowerbound.lower_bound(25);
+            cout << "lower_bound(25): " << *it_lowerbound << endl; // Выведет 30
+
+            it_lowerbound = ms_lowerbound.lower_bound(50);
+            if (it_lowerbound == ms_lowerbound.end())
+                cout << "lower_bound(50): end()" << endl;
+
+                cout << "lower_bound(50): end()" << endl;
+
+            cout << endl << endl;
+
             break;
         }
         // Simple_Code_lesson_(158_STL(Библиотека стандартных шаблонов)_10_MAP_MULTIMAP)
