@@ -6329,6 +6329,14 @@ tryAgain:
 
             cout << endl << endl;
 
+            cout << " ============================================ Multiset - size() ======================================================" << endl << endl;
+
+            std::multiset<int> ms_size = { 1, 2, 2, 3, 4 };
+
+            std::cout << "Размер multiset: " << ms_size.size() << "\n";
+
+            cout << endl << endl;
+
             break;
         }
         // Simple_Code_lesson_(158_STL(Библиотека стандартных шаблонов)_10_MAP_MULTIMAP)
