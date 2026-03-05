@@ -6288,6 +6288,26 @@ tryAgain:
 
             cout << endl << endl;
 
+            cout << " ============================================ Multiset - upper_bound(value) ======================================================" << endl << endl;
+            /*
+            В `std::multiset` функция **`upper_bound(value)`** возвращает итератор на первый элемент, который **строго больше** указанного значения.
+            */
+
+            multiset<int> ms_upperbound = { 10, 20, 20, 30, 40 };
+
+            auto it_upperbound = ms_upperbound.upper_bound(20);
+            cout << "upper_bound(20): " << *it_upperbound << endl; // Выведет 30
+
+            it_upperbound = ms_upperbound.upper_bound(25);
+            cout << "upper_bound(25): " << *it_upperbound << endl; // Выведет 30
+
+            it_upperbound = ms_upperbound.upper_bound(40);
+            if (it_upperbound == ms_upperbound.end())
+                cout << "upper_bound(40): end()" << endl;
+
+
+            cout << endl << endl;
+
             break;
         }
         // Simple_Code_lesson_(158_STL(Библиотека стандартных шаблонов)_10_MAP_MULTIMAP)
