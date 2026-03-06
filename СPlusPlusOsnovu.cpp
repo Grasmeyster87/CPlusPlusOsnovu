@@ -6414,6 +6414,26 @@ tryAgain:
 
             cout << endl << endl;
 
+            cout << " ============================================ Multiset - rbegin() ======================================================" << endl << endl;
+            /*
+            В `std::multiset` функция **`rbegin()`** возвращает *обратный итератор*, 
+            который указывает на **последний элемент контейнера** (т.е. наибольший по значению, если используется стандартная сортировка `std::less`).
+            */
+
+            std::multiset<int> ms_rbegin = { 5, 1, 3, 3, 2 };
+
+            // rbegin() указывает на последний элемент (максимальный)
+            auto rit_rbegin = ms_rbegin.rbegin();
+            std::cout << "Последний элемент: " << *rit_rbegin << std::endl;
+
+            // Итерация в обратном порядке
+            for (auto it = ms_rbegin.rbegin(); it != ms_rbegin.rend(); ++it) {
+                std::cout << *it << " ";
+            }
+
+
+            cout << endl << endl;
+
             break;
         }
         // Simple_Code_lesson_(158_STL(Библиотека стандартных шаблонов)_10_MAP_MULTIMAP)
