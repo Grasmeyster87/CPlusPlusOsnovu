@@ -6379,6 +6379,23 @@ tryAgain:
 
             cout << endl << endl;
 
+            cout << " ============================================ Multiset - begin() ======================================================" << endl << endl;
+            /*
+            В `std::multiset` функция-член `begin()` возвращает итератор на первый элемент контейнера.
+            */
+            std::multiset<int> ms_begin = { 5, 1, 3, 3, 2 };
+
+            // begin() указывает на минимальный элемент
+            auto it_begin = ms_begin.begin();
+            std::cout << "Первый элемент: " << *it_begin << std::endl;
+
+            // Итерация по всем элементам
+            for (auto iter = ms_begin.begin(); iter != ms_begin.end(); ++iter) {
+                std::cout << *iter << " ";
+            }
+
+            cout << endl << endl;
+
             break;
         }
         // Simple_Code_lesson_(158_STL(Библиотека стандартных шаблонов)_10_MAP_MULTIMAP)
