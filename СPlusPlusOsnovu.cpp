@@ -6396,6 +6396,24 @@ tryAgain:
 
             cout << endl << endl;
 
+            cout << " ============================================ Multiset - end() ======================================================" << endl << endl;
+            /*
+            В `std::multiset` функция **`end()`** возвращает итератор, который указывает **за последний элемент контейнера**.  
+            */
+
+            std::multiset<int> ms_end = { 5, 1, 3, 3, 2 };
+
+            // Итерация от begin() до end()
+            for (auto it = ms_end.begin(); it != ms_end.end(); ++it) {
+                std::cout << *it << " ";
+            }
+            std::cout << "\n";
+
+            // Попытка разыменовать end() — ошибка!
+            // std::cout << *ms.end(); // так делать нельзя
+
+            cout << endl << endl;
+
             break;
         }
         // Simple_Code_lesson_(158_STL(Библиотека стандартных шаблонов)_10_MAP_MULTIMAP)
