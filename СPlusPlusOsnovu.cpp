@@ -6496,18 +6496,51 @@ tryAgain:
             • 	В  ключи могут повторяться:
             • 	Вставка элемента с одинаковым ключом добавит новый элемент.
             */
-            std::map<int, std::string> m;
+            std::map<int, std::string> m_insert;
 
             // Вставка пары
-            auto result = m.insert({ 1, "one" });
+            auto result_insert = m_insert.insert({ 1, "one" });
 
-            if (result.second) {
-                std::cout << "Элемент добавлен: " << result.first->first
-                    << " -> " << result.first->second << std::endl;
+            if (result_insert.second) {
+                std::cout << "Элемент добавлен: " << result_insert.first->first
+                    << " -> " << result_insert.first->second << std::endl;
             }
             else {
                 std::cout << "Ключ уже существует!" << std::endl;
             }
+
+            cout << endl << endl;
+
+            cout << " ===================================================  Map, Multimap - emplace(key, value)===============================================" << endl << endl;
+            /*
+            Команда **`emplace(key, value)`** во многом похожа на `insert`, но имеет важное отличие: она **создаёт объект прямо внутри контейнера**, 
+            минуя лишние копирования и временные объекты. Это делает её более эффективной, особенно при работе с тяжёлыми структурами данных.  
+
+                ---
+
+                ## 🔧 Особенности работы
+                - В **`map`**:
+                  - Ключи уникальны, поэтому если ключ уже существует, новый элемент не добавится.
+                - В **`multimap`**:
+                  - Ключи могут повторяться, поэтому каждый вызов `emplace` добавит новый элемент.
+
+                ---
+            */
+
+            std::map<int, std::string> m_emplace;
+
+            // Вставка с конструированием на месте
+            auto result_emplace = m_emplace.emplace(1, "one");
+
+            if (result_emplace.second) {
+                std::cout << "Элемент добавлен: "
+                    << result_emplace.first->first << " -> "
+                    << result_emplace.first->second << std::endl;
+            }
+            else {
+                std::cout << "Ключ уже существует!" << std::endl;
+            }
+
 
             cout << " ==================================================================================================" << endl << endl;
 
