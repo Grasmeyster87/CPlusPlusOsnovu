@@ -6559,6 +6559,34 @@ tryAgain:
             size_t erased = mm.erase(1); // удалит все элементы с ключом 1
             std::cout << "Удалено: " << erased << std::endl;
 
+            cout << endl << endl;
+
+            cout << " ===================================================  Map, Multimap - erase(iterator) ===============================================" << endl << endl;
+            /*
+            Команда **`erase(iterator)`** в контейнерах `map` и `multimap` удаляет элемент, на который указывает итератор.  
+
+            ---
+
+            ## 📌 Поведение
+            - В обоих контейнерах (`map` и `multimap`) удаляется **ровно один элемент**.
+            - Итератор должен быть валидным (указывать на существующий элемент).
+            - Возвращает итератор на элемент, следующий за удалённым.
+
+            ---
+            */
+            std::multimap<int, std::string> mm_erase1;
+            mm_erase1.insert({ 1, "один" });
+            mm_erase1.insert({ 1, "ещё один" });
+            mm_erase1.insert({ 2, "два" });
+
+            auto it_erase1 = mm_erase1.find(1); // итератор на первый элемент с ключом 1
+            if (it_erase1 != mm_erase1.end()) {
+                it_erase1 = mm_erase1.erase(it_erase1); // удаляем только один элемент
+            }
+            for (const auto& elem : mm_erase1) {
+                std::cout << elem.first << " -> " << elem.second << std::endl;
+            }
+
             cout << " ==================================================================================================" << endl << endl;
 
             pair<int, string> p{ 1, "fone" };
