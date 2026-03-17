@@ -6688,6 +6688,29 @@ tryAgain:
             - `lower_bound(key)` → первый элемент с ключом **не меньше** (`>= key`).  
             - `upper_bound(key)` → первый элемент с ключом **строго больше** (`> key`)
             */
+            std::multimap<int, std::string> mm145upper_bound;
+
+            mm145upper_bound.insert({ 1, "apple" });
+            mm145upper_bound.insert({ 2, "banana" });
+            mm145upper_bound.insert({ 2, "orange" });
+            mm145upper_bound.insert({ 4, "grape" });
+
+            auto it145upper_bound = mm145upper_bound.upper_bound(2);
+            if (it145upper_bound != mm145upper_bound.end()) {
+                std::cout << "upper_bound(2): key = " << it145upper_bound->first
+                    << ", value = " << it145upper_bound->second << std::endl;
+            }
+
+            it145upper_bound = mm145upper_bound.upper_bound(3);
+            if (it145upper_bound != mm145upper_bound.end()) {
+                std::cout << "upper_bound(3): key = " << it145upper_bound->first
+                    << ", value = " << it145upper_bound->second << std::endl;
+            }
+
+            it145upper_bound = mm145upper_bound.upper_bound(4);
+            if (it145upper_bound == mm145upper_bound.end()) {
+                std::cout << "upper_bound(4): end()" << std::endl;
+            }
 
             /*
             
