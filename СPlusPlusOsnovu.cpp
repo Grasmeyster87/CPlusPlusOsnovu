@@ -6643,8 +6643,41 @@ tryAgain:
             std::cout << "Количество элементов с ключом 3: "
                 << mm145count.count(3) << std::endl;
 
+            cout << endl << endl;
 
+            cout << " ===================================================  Map, Multimap - lower_bound(key) ===============================================" << endl << endl;
+            /*
+            В `std::multimap` метод **`lower_bound(const Key& key)`** возвращает итератор на **первый элемент, чей ключ не меньше (`>=`) указанного**.  
 
+            ### Особенности:
+            - Если ключ существует, `lower_bound(key)` указывает на первый элемент с этим ключом.  
+            - Если ключа нет, но есть элементы с ключом больше данного, итератор указывает на первый такой элемент.  
+            - Если все ключи меньше указанного, возвращается `end()`. 
+            */
+            std::multimap<int, std::string> mm145lower_bound;
+
+            mm145lower_bound.insert({ 1, "apple" });
+            mm145lower_bound.insert({ 2, "banana" });
+            mm145lower_bound.insert({ 2, "orange" });
+            mm145lower_bound.insert({ 4, "grape" });
+            
+            auto it145lower_bound = mm145lower_bound.lower_bound(2);
+            if (it145lower_bound != mm145lower_bound.end()) {
+                std::cout << "lower_bound(2): key = " << it145lower_bound->first
+                    << ", value = " << it145lower_bound->second << std::endl;
+            }
+
+            it145lower_bound = mm145lower_bound.lower_bound(3);
+            if (it145lower_bound != mm145lower_bound.end()) {
+                std::cout << "lower_bound(3): key = " << it145lower_bound->first
+                    << ", value = " << it145lower_bound->second << std::endl;
+            }
+
+            it145lower_bound = mm145lower_bound.lower_bound(5);
+            if (it145lower_bound == mm145lower_bound.end()) {
+                std::cout << "lower_bound(5): end()" << std::endl;
+            }
+            
             cout << " ==================================================================================================" << endl << endl;
 
             pair<int, string> p{ 1, "fone" };
