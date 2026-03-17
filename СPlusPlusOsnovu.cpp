@@ -6712,6 +6712,34 @@ tryAgain:
                 std::cout << "upper_bound(4): end()" << std::endl;
             }
 
+            cout << endl << endl;
+
+            cout << " ===================================================  Map, Multimap - equal_range(const Key& key) ===============================================" << endl << endl;
+
+            /*
+            В `std::multimap` метод **`equal_range(const Key& key)`** возвращает **пару итераторов**:  
+            - `first` → указывает на первый элемент с ключом **не меньше** (`>= key`),  
+            - `second` → указывает на первый элемент с ключом **строго больше** (`> key`).  
+
+            Таким образом, диапазон `[first, second)` охватывает **все элементы с данным ключом**. 
+            */
+            std::multimap<int, std::string> mm145equal_range;
+
+            mm145equal_range.insert({ 1, "apple" });
+            mm145equal_range.insert({ 2, "banana" });
+            mm145equal_range.insert({ 2, "orange" });
+            mm145equal_range.insert({ 2, "kiwi" });
+            mm145equal_range.insert({ 4, "grape" });
+
+            auto range145equal_range = mm145equal_range.equal_range(2);
+
+            std::cout << "Элементы с ключом 2:" << std::endl;
+            for (auto it145equal_range = range145equal_range.first; it145equal_range != range145equal_range.second; ++it145equal_range) {
+                std::cout << it145equal_range->first << " => " << it145equal_range->second << std::endl;
+            }
+
+
+
             /*
             
             cout << " ==================================================================================================" << endl << endl;
