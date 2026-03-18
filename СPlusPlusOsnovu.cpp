@@ -6761,6 +6761,33 @@ tryAgain:
             auto it145begin = mm145begin.begin(); // итератор на элемент с ключом 1
             std::cout << it145begin->first << " : " << it145begin->second << std::endl;
 
+            cout << endl << endl;
+
+            cout << " ===================================================  Map, Multimap - end() ===============================================" << endl << endl;
+            /*
+            В `std::multimap` метод **`end()`** возвращает итератор, который указывает **за последний элемент контейнера**.  
+
+            ### Ключевые моменты:
+            - **Тип возвращаемого значения**:  
+              - `iterator` — для неконстантного контейнера.  
+              - `const_iterator` — для `const multimap`.  
+
+            - **Что именно означает**:  
+              Итератор `end()` не указывает на реальный элемент, а служит "сигнальной точкой" конца контейнера.  
+              Используется для обозначения границ при итерации.
+            */
+            std::multimap<int, std::string> mm145end;
+            mm145end.insert({ 2, "two" });
+            mm145end.insert({ 1, "one" });
+            mm145end.insert({ 3, "three" });
+
+            // Итерация от begin() до end()
+            for (auto it145end = mm145end.begin(); it145end != mm145end.end(); ++it145end) {
+                std::cout << it145end->first << " : " << it145end->second << std::endl;
+            }
+
+
+
 
 
             /*
