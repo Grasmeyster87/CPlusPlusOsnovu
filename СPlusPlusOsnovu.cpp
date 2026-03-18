@@ -6738,6 +6738,29 @@ tryAgain:
                 std::cout << it145equal_range->first << " => " << it145equal_range->second << std::endl;
             }
 
+            cout << endl << endl;
+
+            cout << " ===================================================  Map, Multimap - begin() ===============================================" << endl << endl;
+            /*
+            В `std::multimap` (как и в других ассоциативных контейнерах C++), функция-член `begin()` возвращает итератор на первый элемент контейнера.  
+
+            ### Основные моменты:
+            - **Тип возвращаемого значения**:  
+              - `iterator` — если контейнер не константный.  
+              - `const_iterator` — если контейнер объявлен как `const`.  
+
+            - **Что именно возвращает**:  
+              Итератор указывает на элемент с **наименьшим ключом** (так как `multimap` хранит элементы в отсортированном порядке по ключу).  
+              Если контейнер пуст, `begin()` совпадает с `end()`.
+            */
+            std::multimap<int, std::string> mm145begin;
+            mm145begin.insert({ 2, "two" });
+            mm145begin.insert({ 1, "one" });
+            mm145begin.insert({ 3, "three" });
+
+            auto it145begin = mm145begin.begin(); // итератор на элемент с ключом 1
+            std::cout << it145begin->first << " : " << it145begin->second << std::endl;
+
 
 
             /*
