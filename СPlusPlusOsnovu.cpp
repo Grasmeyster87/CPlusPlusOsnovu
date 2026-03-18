@@ -6787,6 +6787,32 @@ tryAgain:
             }
 
 
+            cout << endl << endl;
+
+            cout << " ===================================================  Map, Multimap - rbegin() ===============================================" << endl << endl;
+            /*
+            В `std::multimap` метод **`rbegin()`** возвращает **обратный итератор** на последний элемент контейнера.  
+
+            ### Основные моменты:
+            - **Тип возвращаемого значения**:  
+              - `reverse_iterator` — для неконстантного контейнера.  
+              - `const_reverse_iterator` — для `const multimap`.  
+
+            - **Что именно означает**:  
+              - Указывает на элемент с **наибольшим ключом** (так как `multimap` хранит элементы в отсортированном порядке).  
+              - Используется для обхода контейнера в обратном порядке: от конца к началу.  
+              - Если контейнер пуст, `rbegin()` совпадает с `rend()`.
+            */
+            std::multimap<int, std::string> mm145rbegin;
+            mm145rbegin.insert({ 2, "two" });
+            mm145rbegin.insert({ 1, "one" });
+            mm145rbegin.insert({ 3, "three" });
+
+            // Итерация в обратном порядке
+            for (auto it145rbegin = mm145rbegin.rbegin(); it145rbegin != mm145rbegin.rend(); ++it145rbegin) {
+                std::cout << it145rbegin->first << " : " << it145rbegin->second << std::endl;
+            }
+
 
 
 
