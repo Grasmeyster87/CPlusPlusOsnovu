@@ -6894,7 +6894,36 @@ tryAgain:
                 std::cout << "Multimap is not empty\n";
             }
 
+            cout << endl << endl;
 
+            cout << " ===================================================  Map, Multimap - clear() ===============================================" << endl << endl;
+
+            /*
+            Функция **`clear()`** в контейнерах `map` и `multimap` используется для полного удаления всех элементов из контейнера.  
+
+            ### 📌 Основные моменты:
+            - **Сигнатура:**  
+              ```cpp
+              void clear() noexcept;
+              ```
+            - **Эффект:**  
+              - Удаляет все элементы.  
+              - После вызова контейнер становится пустым (`empty() == true`).  
+            - **Время выполнения:**  
+              Пропорционально количеству элементов (`O(n)`), так как каждый элемент должен быть уничтожен.
+            */
+
+            std::multimap<int, std::string> myMultiMap145clear;
+
+            myMultiMap145clear.insert({ 1, "Hello" });
+            myMultiMap145clear.insert({ 1, "World" });
+
+            std::cout << "Size before clear: " << myMultiMap145clear.size() << "\n";
+
+            myMultiMap145clear.clear();
+
+            std::cout << "Size after clear: " << myMultiMap145clear.size() << "\n";
+            std::cout << "Is empty? " << (myMultiMap145clear.empty() ? "Yes" : "No") << "\n";
 
             /*
             
