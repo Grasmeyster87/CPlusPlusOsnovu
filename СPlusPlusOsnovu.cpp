@@ -7063,37 +7063,50 @@ tryAgain:
 
             cout << "\t================================================================================================================" << endl << endl;
 
-            stack<int, vector<int>> st;
+            std::stack<int> st1146;
+            std::stack<int> st2146;
 
-            st.push(5);
+            st2146.push(10);
+            st2146.push(20);
+            st2146.push(30);
 
-            st.push(1);
 
-            st.push(12);
+            st1146.push(5);
 
-            st.push(4);
+            st1146.push(1);
 
-            st.emplace(-1);
+            st1146.push(12);
 
-            cout << "\t Последнее значение стека - \t" << st.top() << endl << endl;
-            cout << "\t Возвращает количество элементов в стеке. - \t" << st.size() << endl << endl;
+            st1146.push(4);
 
-            st.pop();// удаление елмента из стека
+            st1146.emplace(-1);
 
-            cout << "\t Последнее значение стека после st.pop() - \t" << st.top() << endl << endl;
+            cout << "\t Последнее значение стека - \t" << st1146.top() << endl << endl;
+            cout << "\t Возвращает количество элементов в стеке. - \t" << st1146.size() << endl << endl;
+
+            st1146.pop();// удаление елмента из стека
+
+            cout << "\t Последнее значение стека после st.pop() - \t" << st1146.top() << endl << endl;
 
             cout << "\t Выводим содержимое - \t";
 
-            while (!st.empty())
+            while (!st1146.empty())
             {
-                cout << st.top() << "\t";
-                st.pop();
+                cout << st1146.top() << "\t";
+                st1146.pop();
             }
 
 
-            /*auto a = st._Get_container();
+            std::cout << "\n\tSize before swap:\n";
+            std::cout << "\tst1: " << st1146.size() << "\n";
+            std::cout << "\tst2: " << st2146.size() << "\n";
 
-             cout << "\t Выводим содержимое a = deque<int> - \t" << a[0] << endl;*/
+            st1146.swap(st2146); // обмен содержимым
+
+            std::cout << "\tSize after swap : \n";
+            std::cout << "\tst1: " << st1146.size() << "\n";
+            std::cout << "\tst2: " << st2146.size() << "\n";
+
 
             cout << endl << endl;
 
