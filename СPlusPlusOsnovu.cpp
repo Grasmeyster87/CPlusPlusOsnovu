@@ -6862,6 +6862,37 @@ tryAgain:
 
             std::cout << "Размер multimap: " << mm145size.size() << std::endl;
 
+            cout << endl << endl;
+
+            cout << " ===================================================  Map, Multimap - empty() ===============================================" << endl << endl;
+            /*
+            В C++ контейнеры `map` и `multimap` предоставляют метод **`empty()`**, который используется для проверки, содержит ли контейнер элементы.  
+
+            ### 📌 Основные моменты:
+            - **Сигнатура:**  
+              ```cpp
+              bool empty() const noexcept;
+              ```
+            - **Возвращаемое значение:**  
+              - `true` — если контейнер пуст (не содержит элементов).  
+              - `false` — если в контейнере есть хотя бы один элемент.  
+            - **Время выполнения:**  
+              Постоянное (`O(1)`), так как контейнер хранит количество элементов.
+
+            */
+
+            std::multimap<int, std::string> myMultiMap145;
+
+            if (myMultiMap145.empty()) {
+                std::cout << "Multimap is empty\n";
+            }
+
+            myMultiMap145.insert({ 1, "Hello" });
+            myMultiMap145.insert({ 1, "World" });
+
+            if (!myMultiMap145.empty()) {
+                std::cout << "Multimap is not empty\n";
+            }
 
 
 
@@ -6959,7 +6990,7 @@ tryAgain:
 
             cout << endl << endl;
 
-            break;
+            break;*/
         }
         // Simple_Code_lesson_(159_STL(Библиотека стандартных шаблонов)_11_Stack_Адаптеры контейнеров)
         case(146):
