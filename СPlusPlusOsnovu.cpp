@@ -7237,6 +7237,36 @@ tryAgain:
                 cout << "\tElements_count - " << pq1.size() << "\n\n";
 
             }
+            cout << endl << endl;
+
+            cout << "\t================================================ emplace ================================================================\t" << endl << endl;
+            struct Task {
+                int priority;
+                std::string description;
+
+                Task(int p, std::string d) : priority(p), description(std::move(d)) {}
+
+                // Для priority_queue потрібен оператор порівняння
+                bool operator<(const Task& other) const {
+                    return priority < other.priority; // більший пріоритет = вище в черзі
+                }
+            };
+
+            std::priority_queue<Task> tasks;
+
+            // Використання emplace: конструюємо об'єкт прямо в черзі
+            tasks.emplace(3, "Write report");
+            tasks.emplace(1, "Check emails");
+            tasks.emplace(5, "Fix critical bug");
+            tasks.emplace(2, "Team meeting");
+
+            std::cout << "Виконання завдань за пріоритетом:\n";
+            while (!tasks.empty()) {
+                std::cout << "Priority " << tasks.top().priority
+                    << ": " << tasks.top().description << "\n";
+                tasks.pop();
+            }
+
 
             cout << endl << endl;
 
