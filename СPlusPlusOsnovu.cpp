@@ -7201,24 +7201,42 @@ tryAgain:
 
             cout << "\t================================================================================================================\t" << endl << endl;
 
-            priority_queue<int> pq;//list not us, only vector and deque
+            priority_queue<int> pq1;//list not us, only vector and deque
 
-            pq.push(56);
+            std::priority_queue<int> pq2;
 
-            pq.push(4);
+            // Заповнюємо другу чергу
+            pq2.push(5);
+            pq2.push(15);
 
-            pq.push(7);
 
-            pq.push(99);
+            pq1.push(56);
 
-            while (!pq.empty())//цикл while работает пока очередь не пуста
+            pq1.push(4);
+
+            pq1.push(7);
+
+            pq1.push(99);
+
+            std::cout << "Перед swap:\n";
+            std::cout << "pq top = " << pq1.top() << "\n"; // 30
+            std::cout << "pq2 top = " << pq2.top() << "\n"; // 15
+
+            // Міняємо місцями
+            pq1.swap(pq2);
+
+            std::cout << "\nПісля swap:\n";
+            std::cout << "pq1 top = " << pq1.top() << "\n"; // 15
+            std::cout << "pq2 top = " << pq2.top() << "\n"; // 30
+
+
+            while (!pq1.empty())//цикл while работает пока очередь не пуста
             {
-                cout << "\tQueue - " << pq.top() << "\n\n";
-                pq.pop();
-                cout << "\tElements_count - " << pq.size() << "\n\n";
+                cout << "\tQueue - " << pq1.top() << "\n\n";
+                pq1.pop();
+                cout << "\tElements_count - " << pq1.size() << "\n\n";
 
             }
-
 
             cout << endl << endl;
 
